@@ -1,6 +1,7 @@
-FROM alpine:3.6
+# Use docker instead of alpine to favour `kubectl create secret docker-registry ...` with docker config file stored in ~/.docker/config.json
+FROM docker:18.09 
 
-LABEL MAINTAINER="Sergii Nuzhdin <ipaq.lw@gmail.com@gmail.com>"
+LABEL MAINTAINER="William K. DEKOU <williamdekou@gmail.com>"
 
 ENV KUBE_LATEST_VERSION="v1.13.0"
 
